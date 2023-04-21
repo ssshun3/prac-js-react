@@ -12,15 +12,15 @@ export function Page() {
     <div>
       <div className="screen">{screenState}</div>
       <div className="button-container">
-        <button className="button" onClick={handleButtonClick}>
-          A
-        </button>
-        <button className="button" onClick={handleButtonClick}>
-          B
-        </button>
-        <button className="button" onClick={handleButtonClick}>
-          C
-        </button>
+        {["A", "B", "C"].map((buttonText) => (
+          <button
+            key={buttonText}
+            className="button"
+            onClick={handleButtonClick}
+          >
+            {buttonText}
+          </button>
+        ))}
       </div>
     </div>
   );

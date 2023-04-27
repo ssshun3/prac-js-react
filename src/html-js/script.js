@@ -1,7 +1,8 @@
 const buttons = document.querySelectorAll(".button-container button");
+const screenElement = document.querySelector(".screen");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    document.querySelector(".screen").textContent = button.textContent;
+    screenElement.textContent = button.textContent;
   });
 });
